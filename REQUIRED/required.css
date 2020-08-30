@@ -1,0 +1,291 @@
+/* Required code for any files needing font-family, color, top navigation */
+/* Import Font-Family */
+@font-face {
+  font-family: Iciel-Brush-Up;
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/iCiel%20Brush%20Up.otf?raw=true");
+}
+@font-face {
+  font-family: Andes-Rounded-Light;
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/AndesRoundedLight.otf?raw=true");
+}
+@font-face {
+  font-family: Gotham-Thin;
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/Gotham-Thin.otf");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: Gotham-Medium;
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/Gotham-Medium.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Gotham-Ultra;
+  src: url("https://github.com/SIPNJ/Studently-Stationary/blob/master/Font/Gotham-Ultra.otf");
+  font-weight: bold;
+}
+/* LIGHT MODE vs DARK MODE */
+body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.dark-mode {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+/* Class Font-Family */
+.title1st {
+  font-family: Iciel-Brush-Up;
+}
+.title2nd {
+  font-family: Gotham-Ultra;
+  font-weight: bold;
+}
+.subtitle {
+  font-family: Gotham-Medium;
+  font-weight: normal;
+}
+.paratext {
+  font-family: Gotham-Thin;
+  font-weight: lighter;
+}
+.curved-text {
+  font-family: Andes-Rounded-Light;
+}
+/* 
+  Base Colors :
+      rgb(248,122,141)
+      rgb(113,117,200)
+      rgb(194,120,213)
+      rgb(107,229,140)
+      rgb(106,201,212)
+*/
+/* Base Color for Background */
+.bgbase0 {
+  background-color: rgb(248, 122, 141);
+}
+.bgbase1 {
+  background-color: rgb(113, 117, 200);
+}
+.bgbase2 {
+  background-color: rgb(194, 120, 213);
+}
+.bgbase3 {
+  background-color: rgb(107, 229, 140);
+}
+.bgbase4 {
+  background-color: rgb(106, 201, 212);
+}
+/* Base Color for Text */
+.base0 {
+  color: rgb(248, 122, 141);
+}
+.base1 {
+  color: rgb(113, 117, 200);
+}
+.base2 {
+  color: rgb(194, 120, 213);
+}
+.base3 {
+  color: rgb(107, 229, 140);
+}
+.base4 {
+  color: rgb(106, 201, 212);
+}
+/* Base Color for Border */
+.bdbase0 {
+  border-color: rgb(248, 122, 141);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdbase1 {
+  border-color: rgb(113, 117, 200);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdbase2 {
+  border-color: rgb(194, 120, 213);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdbase3 {
+  border-color: rgb(107, 229, 140);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdbase4 {
+  border-color: rgb(106, 201, 212);
+  border-radius: 1vw;
+  border-style: solid;
+}
+
+/* 
+  secondondary Colors :
+      rgb(248,146,122)
+      rgb(236,102,070)
+      rgb(240,215,148)
+*/
+/* secondondary Color for Background */
+.bgsecond0 {
+  background-color: rgb(248, 146, 122);
+}
+.bgsecond1 {
+  background-color: rgb(236, 102, 070);
+}
+.bgsecond2 {
+  background-color: rgb(240, 215, 148);
+}
+/* secondondary Color for Text */
+.second0 {
+  color: rgb(248, 146, 122);
+}
+.second1 {
+  color: rgb(236, 102, 070);
+}
+.second2 {
+  color: rgb(240, 215, 148);
+}
+/* secondondary Color for Border */
+.bdbsecond0 {
+  border-color: rgb(248, 146, 122);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdsecond1 {
+  border-color: rgb(236, 102, 070);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdsecond2 {
+  border-color: rgb(240, 215, 148);
+  border-radius: 1vw;
+  border-style: solid;
+}
+/*
+  Other Colors :
+      rgb(000,000,000)
+      rgb(255,255,255)
+      rgb(224,224,228)
+*/
+/* Other Color for Background */
+.bgthird0 {
+  background-color: rgb(0, 0, 0);
+}
+.bgthird1 {
+  background-color: rgb(255, 255, 255);
+}
+.bgthird2 {
+  background-color: rgb(224, 224, 228);
+}
+.bgthird3 {
+  background-color: rgb(45, 45, 45);
+}
+/* Other Color for Text */
+.third0 {
+  color: rgb(0, 0, 0);
+}
+.third1 {
+  color: rgb(255, 255, 255);
+}
+.third2 {
+  color: rgb(224, 224, 228);
+}
+.third3 {
+  color: rgb(45, 45, 45);
+}
+/* Other Color for Border */
+.bdthird0 {
+  border-color: rgb(0, 0, 0);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdthird1 {
+  border-color: rgb(255, 255, 255);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdthird2 {
+  border-color: rgb(224, 224, 228);
+  border-radius: 1vw;
+  border-style: solid;
+}
+.bdthird3 {
+  border-color: rgb(45, 45, 45);
+  border-radius: 1vw;
+  border-style: solid;
+}
+/* LOGO */
+.LOGO {
+  max-width: 6vw;
+  max-height: 6vw;
+  cursor: pointer;
+}
+/* Top Navigation */
+.topnav div a {
+  float: left;
+  padding: 1.25vw;
+  text-decoration: none;
+}
+.outline-content {
+  border: 1vw #eee;
+}
+
+/* z-index */
+.index-10 {
+  z-index: 10;
+}
+.index-20 {
+  z-index: 20;
+}
+.index-30 {
+  z-index: 30;
+}
+.index-40 {
+  z-index: 40;
+}
+.index-50 {
+  z-index: 50;
+}
+/* Pointer-Events */
+.pointer-none {
+  pointer-events: none;
+}
+.pointer-all {
+  pointer-events: all;
+}
+/* Cursor */
+.cursor-default {
+  cursor: default !important;
+}
+.cursor-alias {
+  cursor: alias !important;
+}
+.cursor-pointer {
+  cursor: pointer !important;
+}
+.cursor-help {
+  cursor: help !important;
+}
+.cursor-zoom-in {
+  cursor: zoom-in !important;
+}
+.cursor-zoom-out {
+  cursor: zoom-out !important;
+}
+.cursor-grab {
+  cursor: grab !important;
+}
+.cursor-grabbing {
+  cursor: grabbing !important;
+}
+.cursor-text {
+  cursor: text !important;
+}
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+.cursor-crosshair {
+  cursor: crosshair !important;
+}
+.cursor-copy {
+  cursor: copy !important;
+}

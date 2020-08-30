@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUNARY</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://sipnj.github.io/Stunary/REQUIRED/required.css">
+    <link rel="stylesheet" href="./CSS/Pokedex.css">
+    <script src="https://kit.fontawesome.com/bbb353060e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Info of Elements -->
+    <div class="infoPanel index-30 bgthird1">
+        <div class="row text-center my-2">
+            <div class="h2 mx-auto title1st third0" id="pokemonName"></div>
+            <div class="h2 mx-auto title1st third0" id="pokemonId"></div>
+        </div>
+        <div class="row my-4">
+            <img class="rounded mx-auto img-fluid" id="pokemonImage" alt="Pokemon Picture">
+        </div>
+        <table class="table table-striped mx-2 mx-md-2 mx-xl-2 my-2">
+            <thead>
+                <tr>
+                    <th scope="col" class="title2nd third0">#</th>
+                    <th scope="col" class="title2nd third0">Main Properties</th>
+                    <th scope="col" class="title2nd third0">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="title2nd third0">1</th>
+                    <td class="subtitle third0">Hit Points</td>
+                    <td class="paratext third0" id="hp"></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="title2nd third0">2</th>
+                    <td class="subtitle third0">Attack</td>
+                    <td class="paratext third0" id="attack"></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="title2nd third0">3</th>
+                    <td class="subtitle third0">Defense</td>
+                    <td class="paratext third0" id="defense"></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="title2nd third0">4</th>
+                    <td class="subtitle third0">Special Attack</td>
+                    <td class="paratext third0" id="special-attack"></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="title2nd third0">5</th>
+                    <td class="subtitle third0">Special Defense</td>
+                    <td class="paratext third0" id="special-defense"></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="title2nd third0">6</th>
+                    <td class="subtitle third0">Speed</td>
+                    <td class="paratext third0" id="speed"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="title2nd mx-auto text-center">Evolution</div>
+        <div id="evolution-group">
+        </div>
+    </div>
+    <!-- Overlay -->
+    <div class="container-fluid overlay bgthird0 index-20 pointer-none"></div>
+    <!-- Top navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bgbase3 container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a href="/index.html" class="navbar-brand text-dark">
+            <img class="LOGO" src="https://raw.githubusercontent.com/SIPNJ/Stunary/master/Picture/LOGO.png" alt="LOGO">
+        </a>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <!-- First navbar -->
+            <ul class="nav nav-justify mr-auto">
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="/index.html">Home</a>
+                </li>
+                <!-- HIERARCHY -->
+                <li class="nav-item">
+                    <a class="nav-link title2nd text-dark" href="/stunary/hierarchy/hierarchy.html">Hierarchy</a>
+                </li>
+                <!-- ACCOUNT -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle title2nd text-dark" href="#" id="account-drop-down" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="account-drop-down" id="accountDropdown">
+                    </div>
+                </li>
+            </ul>
+            <!-- Second navbar -->
+            <form class="form-inline d-xs-none d-sm-none d-md-none d-lg-block my-2 my-lg-0">
+                <input class="form-control mr-sm-2 title2nd text-dark" type="search" placeholder="Search">
+                <button class="btn btn-outline-dark px-3 py-3-outline-dark title2nd my-2 my-sm-0"
+                    type="submit">Enter</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb title2nd text-dark mr-auto">
+            <li class="breadcrumb-item" aria-current="page">Stunary</li>
+            <li class="breadcrumb-item" aria-current="page">Beta App</li>
+            <li class="breadcrumb-item active mr-auto" aria-current="page">Pokedex</li>
+            <!-- LIGHT / DARK MODE -->
+            <li class="ml-auto">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="toggle-light">
+                    <label class="custom-control-label paratext text-dark" for="toggle-light">Light/Dark</label>
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <!-- Search bar -->
+    <form class="container-fluid form-inline mx-md-3 my-md-3" autocomplete="off">
+        <input class="form-control text-dark mx-2 mx-md-2" type="text" id="name" placeholder="Name or ID">
+        <input class="btn btn-outline-dark mx-2 mx-md-2" type="button" id="btn" value="Search">
+        <div class="invalid-feedback">Please choose a right name of a Pokemon</div>
+    </form>
+    <!-- Infomation -->
+    <div class="container-fluid">
+        <div class="row mx-auto" id="pokemons-group">
+        </div>
+        <div class="container-fluid row">
+            <button class="btn btn-outline-dark mx-auto mx-md-auto my-4" id="view-more">View more</button>
+        </div>
+    </div>
+
+    <script src="./JS/pokedex.js"></script>
+    <script src="/REQUIRED/required.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
